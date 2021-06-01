@@ -97,7 +97,7 @@ for path, maker, bandgap in zip(paths, makers, bandgaps):
             PLQE_oc = oc_image/white_ref
             PLQE_sc =  sc_image/white_ref
 
-            metric = np.mean(1 - (PLQE_sc*(1-PLQE_oc))/((PLQE_oc*(1-PLQE_sc))))
+            metric = np.mean(1 - ((PLQE_sc*(1-PLQE_oc))/((PLQE_oc*(1-PLQE_sc)))))
 
             with open("current_db_pl.csv",'a',newline='') as file:
                 writer = csv.writer(file)
